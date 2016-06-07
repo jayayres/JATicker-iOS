@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69095ED71CEFF69400F9B3B7 /* JATickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69095ED61CEFF69400F9B3B7 /* JATickerView.swift */; };
+		69095ED91CEFF6B800F9B3B7 /* JATickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69095ED81CEFF6B800F9B3B7 /* JATickerViewDelegate.swift */; };
+		6920386E1D03AC93005F7FF1 /* JATickerScrollState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6920386D1D03AC93005F7FF1 /* JATickerScrollState.swift */; };
+		692038701D03ACF8005F7FF1 /* JATickerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6920386F1D03ACF8005F7FF1 /* JATickerUtils.swift */; };
+		692038721D03BA31005F7FF1 /* JATickerDotRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692038711D03BA31005F7FF1 /* JATickerDotRepresentation.swift */; };
+		6939950B1CF0D6B900721DF7 /* JATickerDotColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939950A1CF0D6B900721DF7 /* JATickerDotColor.swift */; };
+		6939950D1CF0D7CD00721DF7 /* UIImage+JATickerViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939950C1CF0D7CD00721DF7 /* UIImage+JATickerViewAdditions.swift */; };
+		6944C6A81CFCB932006E84F6 /* JATickerViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944C6A71CFCB932006E84F6 /* JATickerViewConstants.swift */; };
+		698A77F91CFFDAF000FF036A /* NSBundle+JATickerViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698A77F81CFFDAF000FF036A /* NSBundle+JATickerViewAdditions.swift */; };
+		6997748B1CEF60C9005B8E37 /* JATickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 699774861CEF60C9005B8E37 /* JATickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		699774991CEF6164005B8E37 /* TickerImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699774971CEF6164005B8E37 /* TickerImages.xcassets */; };
+		6997749A1CEF6164005B8E37 /* symbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = 699774981CEF6164005B8E37 /* symbols.txt */; };
+		6997749C1CEF621B005B8E37 /* JATickerChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6997749B1CEF621B005B8E37 /* JATickerChar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		69095ED61CEFF69400F9B3B7 /* JATickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerView.swift; path = Source/JATickerView.swift; sourceTree = "<group>"; };
+		69095ED81CEFF6B800F9B3B7 /* JATickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerViewDelegate.swift; path = Source/JATickerViewDelegate.swift; sourceTree = "<group>"; };
+		6920386D1D03AC93005F7FF1 /* JATickerScrollState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerScrollState.swift; path = Source/JATickerScrollState.swift; sourceTree = "<group>"; };
+		6920386F1D03ACF8005F7FF1 /* JATickerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerUtils.swift; path = Source/JATickerUtils.swift; sourceTree = "<group>"; };
+		692038711D03BA31005F7FF1 /* JATickerDotRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerDotRepresentation.swift; path = Source/JATickerDotRepresentation.swift; sourceTree = "<group>"; };
+		692766F61CFE7148009CB6B0 /* JATickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JATickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6939950A1CF0D6B900721DF7 /* JATickerDotColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerDotColor.swift; path = Source/JATickerDotColor.swift; sourceTree = "<group>"; };
+		6939950C1CF0D7CD00721DF7 /* UIImage+JATickerViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+JATickerViewAdditions.swift"; path = "Source/UIImage+JATickerViewAdditions.swift"; sourceTree = "<group>"; };
+		6944C6A71CFCB932006E84F6 /* JATickerViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerViewConstants.swift; path = Source/JATickerViewConstants.swift; sourceTree = "<group>"; };
+		698A77F81CFFDAF000FF036A /* NSBundle+JATickerViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSBundle+JATickerViewAdditions.swift"; path = "Source/NSBundle+JATickerViewAdditions.swift"; sourceTree = "<group>"; };
+		699774861CEF60C9005B8E37 /* JATickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JATickerView.h; path = Source/JATickerView.h; sourceTree = "<group>"; };
+		699774941CEF6109005B8E37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		699774971CEF6164005B8E37 /* TickerImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TickerImages.xcassets; path = Resources/TickerImages.xcassets; sourceTree = "<group>"; };
+		699774981CEF6164005B8E37 /* symbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = symbols.txt; path = Resources/symbols.txt; sourceTree = "<group>"; };
+		6997749B1CEF621B005B8E37 /* JATickerChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JATickerChar.swift; path = Source/JATickerChar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69220EE11CED5325000A2415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6909142F169375F30053A65C = {
+			isa = PBXGroup;
+			children = (
+				699774771CEF5FF2005B8E37 /* Source */,
+				699774961CEF6152005B8E37 /* Resources */,
+				699774791CEF6009005B8E37 /* Products */,
+				692766F61CFE7148009CB6B0 /* JATickerView.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		699774771CEF5FF2005B8E37 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				69095ED81CEFF6B800F9B3B7 /* JATickerViewDelegate.swift */,
+				6997749B1CEF621B005B8E37 /* JATickerChar.swift */,
+				69095ED61CEFF69400F9B3B7 /* JATickerView.swift */,
+				6939950A1CF0D6B900721DF7 /* JATickerDotColor.swift */,
+				6944C6A71CFCB932006E84F6 /* JATickerViewConstants.swift */,
+				6920386D1D03AC93005F7FF1 /* JATickerScrollState.swift */,
+				6920386F1D03ACF8005F7FF1 /* JATickerUtils.swift */,
+				692038711D03BA31005F7FF1 /* JATickerDotRepresentation.swift */,
+				6939950C1CF0D7CD00721DF7 /* UIImage+JATickerViewAdditions.swift */,
+				698A77F81CFFDAF000FF036A /* NSBundle+JATickerViewAdditions.swift */,
+				699774931CEF60F9005B8E37 /* Supporting Files */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		699774791CEF6009005B8E37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		699774931CEF60F9005B8E37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				699774861CEF60C9005B8E37 /* JATickerView.h */,
+				699774941CEF6109005B8E37 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		699774961CEF6152005B8E37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				699774971CEF6164005B8E37 /* TickerImages.xcassets */,
+				699774981CEF6164005B8E37 /* symbols.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		69220EE21CED5325000A2415 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6997748B1CEF60C9005B8E37 /* JATickerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		69220EE41CED5325000A2415 /* JATickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69220EF61CED5325000A2415 /* Build configuration list for PBXNativeTarget "JATickerView" */;
+			buildPhases = (
+				69220EE01CED5325000A2415 /* Sources */,
+				6944C6A91CFCBAA8006E84F6 /* ShellScript */,
+				69220EE11CED5325000A2415 /* Frameworks */,
+				69220EE21CED5325000A2415 /* Headers */,
+				69220EE31CED5325000A2415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JATickerView;
+			productName = JATickerView;
+			productReference = 692766F61CFE7148009CB6B0 /* JATickerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69091431169375F30053A65C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JA;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = jaysapps;
+				TargetAttributes = {
+					69220EE41CED5325000A2415 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 69091434169375F30053A65C /* Build configuration list for PBXProject "JATickerView" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6909142F169375F30053A65C;
+			productRefGroup = 6909142F169375F30053A65C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69220EE41CED5325000A2415 /* JATickerView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69220EE31CED5325000A2415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				699774991CEF6164005B8E37 /* TickerImages.xcassets in Resources */,
+				6997749A1CEF6164005B8E37 /* symbols.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6944C6A91CFCBAA8006E84F6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69220EE01CED5325000A2415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69095ED91CEFF6B800F9B3B7 /* JATickerViewDelegate.swift in Sources */,
+				6944C6A81CFCB932006E84F6 /* JATickerViewConstants.swift in Sources */,
+				692038701D03ACF8005F7FF1 /* JATickerUtils.swift in Sources */,
+				6939950B1CF0D6B900721DF7 /* JATickerDotColor.swift in Sources */,
+				692038721D03BA31005F7FF1 /* JATickerDotRepresentation.swift in Sources */,
+				698A77F91CFFDAF000FF036A /* NSBundle+JATickerViewAdditions.swift in Sources */,
+				6997749C1CEF621B005B8E37 /* JATickerChar.swift in Sources */,
+				6939950D1CF0D7CD00721DF7 /* UIImage+JATickerViewAdditions.swift in Sources */,
+				6920386E1D03AC93005F7FF1 /* JATickerScrollState.swift in Sources */,
+				69095ED71CEFF69400F9B3B7 /* JATickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		69091446169375F30053A65C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		69091447169375F30053A65C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69220EF71CED5325000A2415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaysapps.JATickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		69220EF81CED5325000A2415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaysapps.JATickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69091434169375F30053A65C /* Build configuration list for PBXProject "JATickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69091446169375F30053A65C /* Debug */,
+				69091447169375F30053A65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69220EF61CED5325000A2415 /* Build configuration list for PBXNativeTarget "JATickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69220EF71CED5325000A2415 /* Debug */,
+				69220EF81CED5325000A2415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69091431169375F30053A65C /* Project object */;
+}
