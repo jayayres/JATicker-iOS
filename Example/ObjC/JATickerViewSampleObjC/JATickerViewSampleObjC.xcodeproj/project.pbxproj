@@ -24,13 +24,6 @@
 			remoteGlobalIDString = 692766F61CFE7148009CB6B0;
 			remoteInfo = JATickerView;
 		};
-		6991E0A71CFFD48D00A43A9E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6991E0A01CFFD48D00A43A9E /* JATickerView.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 692766F71CFE7148009CB6B0;
-			remoteInfo = JATickerViewTests;
-		};
 		6991E0A91CFFD49B00A43A9E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6991E0A01CFFD48D00A43A9E /* JATickerView.xcodeproj */;
@@ -111,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				6991E0A61CFFD48D00A43A9E /* JATickerView.framework */,
-				6991E0A81CFFD48D00A43A9E /* JATickerViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +135,7 @@
 		6991E07E1CFFD47B00A43A9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = jaysapps;
 				TargetAttributes = {
 					6991E0851CFFD47B00A43A9E = {
@@ -181,13 +173,6 @@
 			fileType = wrapper.framework;
 			path = JATickerView.framework;
 			remoteRef = 6991E0A51CFFD48D00A43A9E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6991E0A81CFFD48D00A43A9E /* JATickerViewTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = JATickerViewTests.xctest;
-			remoteRef = 6991E0A71CFFD48D00A43A9E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -260,8 +245,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -304,8 +291,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -331,8 +320,8 @@
 		6991E09E1CFFD47B00A43A9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = JATickerViewSampleObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaysapps.JATickerViewSampleObjC;
@@ -343,8 +332,8 @@
 		6991E09F1CFFD47B00A43A9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = JATickerViewSampleObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaysapps.JATickerViewSampleObjC;

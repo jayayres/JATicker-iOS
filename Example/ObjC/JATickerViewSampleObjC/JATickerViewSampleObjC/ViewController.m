@@ -73,7 +73,7 @@
 }
 
 - (void)tickerView:(JATickerView *)tickerView tickerReachedPosition:(NSUInteger)pos {
-    [self.position setText:[NSString stringWithFormat:@"Ticker position: %lu", (unsigned long)pos]];
+    (self.position).text = [NSString stringWithFormat:@"Ticker position: %lu", (unsigned long)pos];
 }
 
 /**
@@ -82,7 +82,7 @@
  * image when the light is off.
  **/
 - (UIImage*)tickerView:(JATickerView *)tickerView imageForLightOnAtX:(NSUInteger)x andY:(NSUInteger)y {
-    if (![self.useColorsSwitch isOn])
+    if (!(self.useColorsSwitch).on)
     {
         // Uses default
         return nil;
@@ -102,7 +102,7 @@
 }
 
 - (IBAction)onIsTickerOnChanged:(UISwitch *)sender {
-    if ([self.isOnSwitch isOn]) {
+    if ((self.isOnSwitch).on) {
         [self.tickerView startTicker];
     }
     else {

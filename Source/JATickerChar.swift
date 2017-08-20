@@ -20,27 +20,26 @@ import Foundation
  Digitized representation of a character suitable for indicating
  which ticker dots should be on and which should be off.
  */
-@objc public class JATickerChar: NSObject {
+@objc open class JATickerChar: NSObject {
     /**
     Number of dots typically taken up horizontally for each character
     */
-    public static let kDotCharWidth: Int = 5
+    open static let kDotCharWidth: Int = 5
 
     /**
     Number of dots taken up vertically for each character
     */
-    public static let kDotCharHeight: Int = 6
+    open static let kDotCharHeight: Int = 6
 
     /**
     Required length of the initialization string
     */
-    private static let kDotInitializationLength = kDotCharWidth * kDotCharHeight
+    fileprivate static let kDotInitializationLength = kDotCharWidth * kDotCharHeight
 
     /**
      2D array of booleans representing the dots
      */
-    private var dots: [[Bool]] = [[Bool]](count: JATickerChar.kDotCharWidth, repeatedValue:
-        [Bool](count: JATickerChar.kDotCharHeight, repeatedValue:false))
+    fileprivate var dots: [[Bool]] = [[Bool]](repeating: [Bool](repeating: false, count: JATickerChar.kDotCharHeight), count: JATickerChar.kDotCharWidth)
 
     // MARK: - Initialization
 
@@ -61,8 +60,7 @@ import Foundation
 
         for xCoord in (0..<dots.count) {
             for yCoord in (0..<dots[xCoord].count) {
-                let nextIndex = string.startIndex.advancedBy(
-                                    yCoord*JATickerChar.kDotCharWidth + xCoord)
+                let nextIndex = string.characters.index(string.startIndex, offsetBy: yCoord*JATickerChar.kDotCharWidth + xCoord)
                 let dotCharacter = string[nextIndex]
                 if dotCharacter == "." {
                     self.setDot(xCoord: xCoord, yCoord: yCoord)
@@ -82,7 +80,7 @@ import Foundation
      - parameter xCoord: Dot X coordinate to turn on, 0 <= xCoord <= kDotCharWidth
      - parameter yCoord: Dot Y coordinate to turn on, 0 <= yCoord = kDotCharHeight
      */
-    public func setDot(xCoord xCoord: Int, yCoord: Int) {
+    open func setDot(xCoord: Int, yCoord: Int) {
         if xCoord < 0 || xCoord >= self.dots.count {
             return
         }
@@ -99,7 +97,7 @@ import Foundation
      - parameter yCoord: Dot Y coordinate to check, 0 <= yCoord = kDotCharHeight
      - returns: True if the dot should be lit up
      */
-    public func shouldLightDot(xCoord xCoord: Int, yCoord: Int) -> Bool {
+    open func shouldLightDot(xCoord: Int, yCoord: Int) -> Bool {
         if xCoord < 0 || xCoord >= self.dots.count {
             return false
         }

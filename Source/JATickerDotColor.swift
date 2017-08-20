@@ -18,5 +18,5 @@ import Foundation
 import UIKit
 
 @objc public enum JATickerDotColor: Int {
-    case Green, Black, Yellow, Red, Blue, Orange, DefaultOn, DefaultOff
+    case green, black, yellow, red, blue, orange, defaultOn, defaultOff
 }

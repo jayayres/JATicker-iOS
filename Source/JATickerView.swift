@@ -21,10 +21,10 @@ import UIKit
  UIView subclass representing the digitized ticker
  */
 @IBDesignable
-@objc public class JATickerView: UIView {
+@objc open class JATickerView: UIView {
     // MARK: - Private constants
-    private static let kTickerNumDotsY = 8
-    private static let kTickerImageCacheCapacity = 400
+    fileprivate static let kTickerNumDotsY = 8
+    fileprivate static let kTickerImageCacheCapacity = 400
     static let kTickerThresholdToRequestMoreData = 60
 
 
@@ -33,7 +33,7 @@ import UIKit
     /**
      The delegate to feed more content to the ticker
      */
-    public weak var delegate: JATickerViewDelegate? {
+    open weak var delegate: JATickerViewDelegate? {
         didSet {
             self.tickerUtils?.tickerDelegate = delegate
             self.flushCacheOfImagesForLights()
@@ -44,12 +44,12 @@ import UIKit
     /**
      How much time in seconds to sleep between ticker ticks
      */
-    public var tickDelaySeconds: NSTimeInterval = 0.16
+    open var tickDelaySeconds: TimeInterval = 0.16
 
     /**
      Whether or not the ticker is ticking
      */
-    public var isStarted: Bool = false
+    open var isStarted: Bool = false
 
     // MARK: - Private properties
 
@@ -57,63 +57,63 @@ import UIKit
      All characters for the ticker that have been fed in so far, including
      ones which have already passed by
      */
-    private var curTickerStr: String = ""
+    fileprivate var curTickerStr: String = ""
 
     /**
      UIImageViews for each dot
      */
-    private var imgViews: [[UIImageView]] = []
+    fileprivate var imgViews: [[UIImageView]] = []
 
     /**
      How many dots are present in the view in the x direction
      */
-    private var numDotsX: CGFloat = 0
+    fileprivate var numDotsX: CGFloat = 0
 
     /**
      Dimensions of a dot UIImageView
      */
-    private var dotSize: CGSize? = nil
+    fileprivate var dotSize: CGSize? = nil
 
     /**
      Last size of the ticker view
      */
-    private var lastViewSize: CGSize? = nil
+    fileprivate var lastViewSize: CGSize? = nil
 
     /**
      Dimensions of the source UIImages representing each dot
      */
-    private var dotPixelDimensions: CGSize? = nil
+    fileprivate var dotPixelDimensions: CGSize? = nil
 
     /**
      Whether or not the ticker view is currently changing its dimensions
      */
-    private var isResizing: Bool = false
+    fileprivate var isResizing: Bool = false
 
     /**
      How much ticker data has been fed already from the client
      */
-    private var fedDataLength: UInt = 0
+    fileprivate var fedDataLength: UInt = 0
 
     /**
      Cache of images for specific positions in the ticker
      */
-    private var imageCache: [String:UIImage] =
+    fileprivate var imageCache: [String:UIImage] =
         Dictionary<String, UIImage>(minimumCapacity: kTickerImageCacheCapacity)
 
     /**
      Timer for updating the ticker
      */
-    private var updateTickerTimer: NSTimer? = nil
+    fileprivate var updateTickerTimer: Timer? = nil
 
     /**
      Current state of the ticker's horizontal scrolling
      */
-    private var currentTickerState: JATickerScrollState?
+    fileprivate var currentTickerState: JATickerScrollState?
 
     /**
      Utility instance
      */
-    private var tickerUtils: JATickerUtils?
+    fileprivate var tickerUtils: JATickerUtils?
 
 
     // MARK: - Initialization
@@ -132,7 +132,7 @@ import UIKit
         initMethod(CGRect.zero)
     }
 
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         let utils = JATickerUtils(loadSymbols: false)
         utils.tickerDelegate = self.delegate
@@ -142,7 +142,7 @@ import UIKit
         drawDotRepresentation(dotRepresentation)
     }
 
-    private func initMethod(frame: CGRect) {
+    fileprivate func initMethod(_ frame: CGRect) {
         self.tickerUtils = JATickerUtils()
         self.tickerUtils!.tickerDelegate = self.delegate
         self.tickerUtils!.tickerView = self
@@ -152,7 +152,7 @@ import UIKit
 
     // MARK: - Public methods
 
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
 
         if lastViewSize == nil {
@@ -168,7 +168,7 @@ import UIKit
     /**
      Tell the ticker to start moving
      */
-    public func startTicker() {
+    open func startTicker() {
         if isStarted {
             return
         }
@@ -181,7 +181,7 @@ import UIKit
     /**
      Tell the ticker to stop moving
      */
-    public func stopTicker() {
+    open func stopTicker() {
         if !isStarted {
             return
         }
@@ -194,7 +194,7 @@ import UIKit
      Clear all previously-saved data from the ticker and reset the feed index to 0.
      Stops the ticker if it was started. Client must restart it again to continue.
      */
-    public func clearAllDataFromTicker() {
+    open func clearAllDataFromTicker() {
         stopTicker()
         self.fedDataLength = 0
         self.currentTickerState = nil
@@ -206,7 +206,7 @@ import UIKit
      be used for each light of the ticker. Not necessary to call this unless the
      image for a ticker dot ever changes at runtime.
      */
-    public func flushCacheOfImagesForLights() {
+    open func flushCacheOfImagesForLights() {
         self.imageCache =
             Dictionary<String, UIImage>(minimumCapacity: JATickerView.kTickerImageCacheCapacity)
     }
@@ -214,7 +214,7 @@ import UIKit
 
     // MARK: - Private methods
 
-    private func loadImageForDot(isOn isOn: Bool, atX xCoord: Int, andY yCoord: Int) -> UIImage? {
+    fileprivate func loadImageForDot(isOn: Bool, atX xCoord: Int, andY yCoord: Int) -> UIImage? {
         let cacheKey = String(xCoord) + "_" + String(yCoord) + "_" + String(isOn)
         let cachedImage = imageCache[cacheKey]
         if cachedImage != nil {
@@ -232,8 +232,8 @@ import UIKit
         if image != nil && (image!.size.width != image!.size.height) {
             NSLog("JATickerView illegal state: image at x=" + String(xCoord) +
                   " y=" + String(yCoord) + " must be square but had size (" +
-                  String(image!.size.width) + "," +
-                  String(image!.size.height) + ").")
+                  String(describing: image!.size.width) + "," +
+                  String(describing: image!.size.height) + ").")
             image = nil
         }
 
@@ -256,10 +256,10 @@ import UIKit
                       String(xCoord) + " y=" + String(yCoord) +
                       " must be the same pixel dimensions as the image " +
                       "at (0,0). Expected dimensions of (" +
-                      String(self.dotPixelDimensions!.width) + "," +
-                      String(self.dotPixelDimensions!.height) +
-                      ") but got dimensions of (" + String(image!.size.width) + "," +
-                      String(image!.size.height) + ").")
+                      String(describing: self.dotPixelDimensions!.width) + "," +
+                      String(describing: self.dotPixelDimensions!.height) +
+                      ") but got dimensions of (" + String(describing: image!.size.width) + "," +
+                      String(describing: image!.size.height) + ").")
 
                 // Ensure that the default image is used when this happens
                 image = UIImage.jaTickerViewDefaultDotColorForState(isOn)
@@ -270,7 +270,7 @@ import UIKit
         return image!
     }
 
-    private func reinitLightsAfterResize(frame: CGRect) {
+    fileprivate func reinitLightsAfterResize(_ frame: CGRect) {
         isResizing = true
         var dotHgt = frame.size.height / CGFloat(JATickerView.kTickerNumDotsY)
         if dotHgt <= 0 {
@@ -303,7 +303,7 @@ import UIKit
         self.lastViewSize = CGSize(width: frame.size.width, height: frame.size.height)
     }
 
-    private func updateTickerColumn(columnIndex columnIndex: Int,
+    fileprivate func updateTickerColumn(columnIndex: Int,
                                                 xOffInChar: UInt,
                                                 chr: JATickerChar?) {
         var colViews = imgViews[columnIndex]
@@ -319,7 +319,7 @@ import UIKit
         }
     }
 
-    private func drawDotRepresentation(dots: JATickerDotRepresentation) {
+    fileprivate func drawDotRepresentation(_ dots: JATickerDotRepresentation) {
         guard let utils = self.tickerUtils else {
             return
         }
@@ -353,7 +353,7 @@ import UIKit
 
      - returns: True if more data has been appended to the end of the ticker
      */
-    private func appendMoreTickerDataToEnd() -> Bool {
+    fileprivate func appendMoreTickerDataToEnd() -> Bool {
         if let data = self.delegate?.tickerView?(self, tickerDataAtEnd: self.fedDataLength),
            let utils = self.tickerUtils {
             if data.characters.count > 0 {
@@ -369,7 +369,7 @@ import UIKit
         return false
     }
 
-    @objc private func advanceAndUpdateTicker() {
+    @objc fileprivate func advanceAndUpdateTicker() {
         guard let utils = self.tickerUtils else {
             return
         }
@@ -420,7 +420,7 @@ import UIKit
 
         self.updateTickerTimer?.invalidate()
         self.updateTickerTimer =
-            NSTimer.scheduledTimerWithTimeInterval(tickDelaySeconds,
+            Timer.scheduledTimer(timeInterval: tickDelaySeconds,
                                                    target: self,
                                                    selector: #selector(advanceAndUpdateTicker),
                                                    userInfo: nil,
