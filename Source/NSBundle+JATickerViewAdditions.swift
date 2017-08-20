@@ -16,7 +16,7 @@
 
 import Foundation
 
-extension NSBundle {
+extension Bundle {
     /**
      Return the file contents with the specified name, first checking in the JATickerView
      bundle and then
@@ -26,25 +26,25 @@ extension NSBundle {
      - parameter type: File extension
      - returns: File contents or nil if it could not be loaded
      */
-    class func jaTickerContentsOfFile(name: String, type: String) -> String? {
-        let bundleByClass = NSBundle(forClass: JATickerView.self)
-        if let fileRoot = bundleByClass.pathForResource(name, ofType: type) {
+    class func jaTickerContentsOfFile(_ name: String, type: String) -> String? {
+        let bundleByClass = Bundle(for: JATickerView.self)
+        if let fileRoot = bundleByClass.path(forResource: name, ofType: type) {
             do {
-                return try String(contentsOfFile: fileRoot, encoding: NSUTF8StringEncoding)
+                return try String(contentsOfFile: fileRoot, encoding: String.Encoding.utf8)
             } catch {
                 return nil
             }
-        } else if let bundle = NSBundle(identifier: JATickerViewConstants.JATickerBundleName) {
-            if let fileRoot = bundle.pathForResource(name, ofType: type) {
+        } else if let bundle = Bundle(identifier: JATickerViewConstants.JATickerBundleName) {
+            if let fileRoot = bundle.path(forResource: name, ofType: type) {
                 do {
-                    return try String(contentsOfFile: fileRoot, encoding: NSUTF8StringEncoding)
+                    return try String(contentsOfFile: fileRoot, encoding: String.Encoding.utf8)
                 } catch {
                     return nil
                 }
             }
-        } else if let fileRoot = NSBundle.mainBundle().pathForResource(name, ofType: type) {
+        } else if let fileRoot = Bundle.main.path(forResource: name, ofType: type) {
             do {
-                return try String(contentsOfFile: fileRoot, encoding: NSUTF8StringEncoding)
+                return try String(contentsOfFile: fileRoot, encoding: String.Encoding.utf8)
             } catch {
                 return nil
             }

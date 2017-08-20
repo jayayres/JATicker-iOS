@@ -25,18 +25,18 @@ extension UIImage {
      - parameter name: Name of the image to load
      - returns: Image, or nil if it could not be loaded
      */
-    public class func jaTickerViewImageNamed(name: String) -> UIImage? {
-        let bundleByClass = NSBundle(forClass: JATickerView.self)
+    public class func jaTickerViewImageNamed(_ name: String) -> UIImage? {
+        let bundleByClass = Bundle(for: JATickerView.self)
         if let image = UIImage(named: name,
-                               inBundle: bundleByClass,
-                               compatibleWithTraitCollection: nil) {
+                               in: bundleByClass,
+                               compatibleWith: nil) {
             return image
         }
 
-        if let bundleByName = NSBundle(identifier: JATickerViewConstants.JATickerBundleName) {
+        if let bundleByName = Bundle(identifier: JATickerViewConstants.JATickerBundleName) {
             if let image = UIImage(named: name,
-                                   inBundle: bundleByName,
-                                   compatibleWithTraitCollection: nil) {
+                                   in: bundleByName,
+                                   compatibleWith: nil) {
                 return image
             }
         }
@@ -50,19 +50,19 @@ extension UIImage {
      - parameter color: The dot color
      - returns: Dot image, or nil if none could be loaded
      */
-    public class func jaTickerViewDotImage(color: JATickerDotColor) -> UIImage? {
+    public class func jaTickerViewDotImage(_ color: JATickerDotColor) -> UIImage? {
         switch color {
-        case JATickerDotColor.DefaultOn, JATickerDotColor.Green:
+        case JATickerDotColor.defaultOn, JATickerDotColor.green:
             return UIImage.jaTickerViewImageNamed("greendot")
-        case JATickerDotColor.DefaultOff, JATickerDotColor.Black:
+        case JATickerDotColor.defaultOff, JATickerDotColor.black:
             return UIImage.jaTickerViewImageNamed("blackdot")
-        case JATickerDotColor.Yellow:
+        case JATickerDotColor.yellow:
             return UIImage.jaTickerViewImageNamed("yellowdot")
-        case JATickerDotColor.Red:
+        case JATickerDotColor.red:
             return UIImage.jaTickerViewImageNamed("reddot")
-        case JATickerDotColor.Blue:
+        case JATickerDotColor.blue:
             return UIImage.jaTickerViewImageNamed("bluedot")
-        case JATickerDotColor.Orange:
+        case JATickerDotColor.orange:
             return UIImage.jaTickerViewImageNamed("orangedot")
         }
     }
@@ -73,8 +73,8 @@ extension UIImage {
      - parameter isOn: Whether to load the default for the on state
      - returns: Dot image, or nil if none could be loaded
      */
-    public class func jaTickerViewDefaultDotColorForState(isOn: Bool) -> UIImage? {
-        return isOn ? jaTickerViewDotImage(JATickerDotColor.DefaultOn) :
-                      jaTickerViewDotImage(JATickerDotColor.DefaultOff)
+    public class func jaTickerViewDefaultDotColorForState(_ isOn: Bool) -> UIImage? {
+        return isOn ? jaTickerViewDotImage(JATickerDotColor.defaultOn) :
+                      jaTickerViewDotImage(JATickerDotColor.defaultOff)
     }
 }

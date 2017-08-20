@@ -33,7 +33,7 @@ import UIKit
                                   looking up what ticker data to supply next.
      - returns: Characters to show on the ticker next on the right, in a forward scroll
      */
-    optional func tickerView(tickerView: JATickerView,
+    @objc optional func tickerView(_ tickerView: JATickerView,
                              tickerDataAtEnd currentLength: UInt) -> String
 
     /**
@@ -48,7 +48,7 @@ import UIKit
      - parameter andY: Y coordinate of the ticker starting from 0 on the top
      - returns: Image, or nil if the default should be used
      */
-    optional func tickerView(tickerView: JATickerView,
+    @objc optional func tickerView(_ tickerView: JATickerView,
                              imageForLightOnAtX xCoord: UInt, andY yCoord: UInt) -> UIImage?
 
     /**
@@ -63,7 +63,7 @@ import UIKit
      - parameter andY: Y coordinate of the ticker starting from 0 on the top
      - returns: Image, or nil if the default should be used
      */
-    optional func tickerView(tickerView: JATickerView,
+    @objc optional func tickerView(_ tickerView: JATickerView,
                              imageForLightOffAtX xCoord: UInt,
                              andY yCoord: UInt) -> UIImage?
 
@@ -78,7 +78,7 @@ import UIKit
      - parameter character: Character to digitize
      - returns: Digitized character definition, or nil if the client does not have one
      */
-    optional func tickerView(tickerView: JATickerView,
+    @objc optional func tickerView(_ tickerView: JATickerView,
                              definitionForCharacter character: unichar) -> JATickerChar?
 
     /**
@@ -91,6 +91,6 @@ import UIKit
                                         displayed on the ticker, from the characters supplied
                                         so far to the ticker by the client.
      */
-    optional func tickerView(tickerView: JATickerView,
+    @objc optional func tickerView(_ tickerView: JATickerView,
                              tickerReachedPosition position: UInt)
 }
